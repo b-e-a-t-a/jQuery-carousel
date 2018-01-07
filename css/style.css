@@ -1,0 +1,55 @@
+/* przykład 3.
+
+nav a {
+  padding: 10px;
+}
+*/
+
+/* przykład 4. 
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  cursor: pointer;
+  width: 150px;
+  margin: 2px;
+  flex-basis: 20%;
+  transition: .3s all;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+*/
+
+/* przykład 6.
+body {
+  display:none;
+}
+*/
+
+
+#carousel {
+  margin: 0 auto;
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+}
+ul {
+  width: 2000px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  list-style: none;
+}
+li {
+  width: 400px;
+  height: 400px;
+  list-style: none;
+  float: left;
+}
