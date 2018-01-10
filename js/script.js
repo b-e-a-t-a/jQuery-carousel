@@ -1,3 +1,48 @@
+$(function(){
+
+  var carouselList = $("#carousel ul");
+  setInterval(changeSlide, 3000);
+  function changeSlide(){
+    carouselList.animate({'marginLeft':-400}, 500, moveFirstSlide)
+  };
+  
+  function moveFirstSlide(){
+    var firstItem = carouselList.find("li:first");
+    var lastItem = carouselList.find("li:last");
+    lastItem.after(firstItem);
+    carouselList.css({marginLeft:0});
+  };
+
+
+  $(".next").click(changeSlide);
+  
+  
+});
+
+
+
+//end of js code here, below exercises
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 1.
 //example in Javascript
 addEventListener('click', function() { … });
@@ -119,21 +164,6 @@ $(function(){ //ukrywamy element body na początku załadowania-CSS
 
 */
 
-$(function(){
-
-  var carouselList = $("#carousel ul");
-  setInterval(changeSlide, 3000);
-  function changeSlide(){
-    carouselList.animate({'marginLeft':-400}, 500, moveFirstSlide)
-  };
-  
-  function moveFirstSlide(){
-    var firstItem = carouselList.find("li:first");
-    var lastItem = carouselList.find("li:last");
-    lastItem.after(firstItem);
-    carouselList.css({marginLeft:0});
-  };
-});
 
 
 
