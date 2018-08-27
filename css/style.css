@@ -4,8 +4,10 @@
   width: 400px;
   overflow: hidden;
   position: relative;
+  border: 1px solid #333333;
+  z-index: 1;
 }
-ul {
+#carousel ul {
   width: 2000px;
   margin: 0;
   padding: 0;
@@ -14,8 +16,9 @@ ul {
   font: inherit;
   vertical-align: baseline;
   list-style: none;
+  margin-left: -400px; /* potrzebne do przełączania slajdów */
 }
-li {
+#carousel li {
   width: 400px;
   height: 400px;
   list-style: none;
@@ -37,7 +40,29 @@ li {
 .next {
   left: 370px;
 }
-
+.controls {
+  margin: -190px auto;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+.controls ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.controls li {
+  display: inline;
+  font-size: 200px;
+  color: #333333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.controls li:active {
+  color: grey;
+}
 
 
 /* end of styles for exercise here */

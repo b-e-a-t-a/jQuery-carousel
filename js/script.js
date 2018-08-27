@@ -3,40 +3,48 @@ $(function(){
   var carouselList = $("#carousel ul");
   setInterval(changeSlide, 3000);
   function changeSlide(){
-    carouselList.animate({'marginLeft':-400}, 500, moveFirstSlide)
+    carouselList.animate({'marginLeft':-800}, 500, moveFirstSlide)
   };
   
   function moveFirstSlide(){
     var firstItem = carouselList.find("li:first");
     var lastItem = carouselList.find("li:last");
     lastItem.after(firstItem);
-    carouselList.css({marginLeft:0});
+    carouselList.css({marginLeft:-400});
   };
 
+  function changeSlideLeft(){
+      carouselList.animate({'marginLeft':0}, 500, moveLastSlide)
+    };
+
+  function moveLastSlide(){
+    var firstItem = carouselList.find("li:first"); //jeszcze raz deklarujemy zmienne
+    var lastItem = carouselList.find("li:last");
+    firstItem.before(lastItem);
+    carouselList.css({marginLeft:-400});
+  };
 
   $(".next").click(changeSlide);
+  $(".previous").click(changeSlideLeft);
   
-  
+
 });
 
+/*
+$(".kontrolka").click(function(){
+  $(this).css('color', 'red');
+  $(this).toggleClass('active');
+  console.log($(this).attr('data-number'));
+});
+
+var activeDot = $(".active");
+var previousDot = $()
+
+
+*/
 
 
 //end of js code here, below exercises
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
